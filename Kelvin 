@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kelvin Fix Mechanics</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #eef1f4;
+    }
+    header {
+      background: #0d0d0d;
+      color: #fff;
+      padding: 30px;
+      text-align: center;
+    }
+    nav {
+      background: #222;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      padding: 15px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      height: 350px;
+      background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 0 0 10px rgba(0,0,0,0.7);
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-align: center;
+      padding: 20px;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+      background: white;
+      margin-top: 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+    footer {
+      margin-top: 40px;
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 1rem;
+    }
+    .contact input, .contact textarea {
+      padding: 12px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 100%;
+    }
+    .btn {
+      background: #333;
+      color: white;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+    .btn:hover {
+      background: #555;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .call-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #28a745;
+      color: white;
+      padding: 15px 22px;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      text-decoration: none;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    }
+    .call-btn:hover {
+      background: #218838;
+    }
+    @media (max-width: 600px) {
+      .hero { font-size: 1.8rem; height: 250px; }
+      nav a { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Kelvin Fix Mechanics</h1>
+    <p>Reliable • Professional • Affordable Vehicle Repairs</p>
+  </header>
+
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#booking">Booking</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#dashboard">Admin Dashboard</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="hero">Mobile & Workshop Mechanical Experts</div>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Engine diagnostics & repair</li>
+      <li>Brake system service</li>
+      <li>Suspension & steering repair</li>
+      <li>Oil change & full servicing</li>
+      <li>Emergency roadside assistance</li>
+    </ul>
+  </section>
+
+  <section id="booking">
+    <h2>Online Booking</h2>
+    <p>Fill out the form below to request a repair or vehicle service:</p>
+    <div class="contact">
+      <input type="text" placeholder="Full Name" />
+      <input type="text" placeholder="Phone Number" />
+      <input type="text" placeholder="Vehicle Model" />
+      <textarea rows="4" placeholder="Describe the Issue"></textarea>
+      <button class="btn">Submit Booking</button>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="https://images.unsplash.com/photo-1515923165067-1a5ab7a12a8e" />
+      <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952" />
+      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70" />
+      <img src="https://images.unsplash.com/photo-1493238792000-8113da705763" />
+    </div>
+  </section>
+
+  <section id="dashboard">
+    <h2>Admin Dashboard</h2>
+    <p>This is a placeholder dashboard. Features like booking management, messages, and analytics can be added.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact">
+      <input type="text" placeholder="Your Name" />
+      <input type="email" placeholder="Your Email" />
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button class="btn">Send Message</button>
+    </div>
+    <br>
+    <a class="btn" href="https://wa.me/265998284332">Chat on WhatsApp</a>
+  </section>
+
+  <a class="call-btn" href="tel:0998284332">Call 0998284332</a>
+
+
+<!-- BACKEND INTEGRATION (PHP EXAMPLES) -->
+<!-- booking-handler.php (to be placed on your server) -->
+<!--
+<?php
+if(isset($_POST['name'])){
+    $name = $_POST['name'];
+    $phone = $_POST['phone'];
+    $vehicle = $_POST['vehicle'];
+    $issue = $_POST['issue'];
+
+    $to = "your-email@example.com";
+    $subject = "New Booking from Kelvin Fix Mechanics";
+    $message = "Name: $name
+Phone: $phone
+Vehicle: $vehicle
+Issue: $issue";
+
+    mail($to, $subject, $message);
+}
+?>
+-->
+
+<!-- CONTACT FORM BACKEND contact-handler.php -->
+<!--
+<?php
+if(isset($_POST['email'])){
+    $email = $_POST['email'];
+    $name = $_POST['name'];
+    $msg = $_POST['message'];
+
+    $to = "your-email@example.com";
+    $subject = "New Contact Message";
+    $message = "Name: $name
+Email: $email
+Message: $msg";
+
+    mail($to, $subject, $message);
+}
+?>
+-->
+
+<!-- SECURE ADMIN DASHBOARD LOGIN -->
+<!-- admin-login.php -->
+<!--
+<?php session_start();
+if(isset($_POST['password'])){
+    if($_POST['password'] === "KelvinAdmin2025"){ 
+        $_SESSION['admin'] = true;
+        header('Location: dashboard.php');
+    }
+}
+?>
+<form method="POST">
+ <input type="password" name="password" placeholder="Admin Password">
+ <button>Login</button>
+</form>
+-->
+
+<!-- ANDROID APP WRAPPER (WEBVIEW) -->
+<!-- MainActivity.java example -->
+<!--
+WebView myWebView = findViewById(R.id.webview);
+myWebView.getSettings().setJavaScriptEnabled(true);
+myWebView.loadUrl("https://yourwebsite.com");
+-->
+
+<!-- NEW EXTRA PAGES -->
+<section id="pricing">
+ <h2>Pricing</h2>
+ <ul>
+   <li>Full Service — MK 45,000</li>
+   <li>Engine Diagnostics — MK 20,000</li>
+   <li>Brake Service — MK 18,000</li>
+   <li>Emergency Callout — MK 10,000</li>
+ </ul>
+</section>
+
+<section id="team">
+ <h2>Our Team</h2>
+ <p>Kelvin and his professional mechanics team are certified and trained to handle all types of vehicle repair work.</p>
+</section>
+ <footer>
+    © 2025 Kelvin Fix Mechanics – All Rights Reserved
+  </footer>
+  
+</body>
+</html>
